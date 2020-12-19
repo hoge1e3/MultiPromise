@@ -242,9 +242,9 @@ function gen() {
             return R(r);
     }).all((rs) => {
         rs = rs.filter(r => !r.result.isRedundant());
-        if (rs.length >= 2) {
-            //if (!alreadyAppeared(rs.map(r=>`${r.result}`), appeared)) {
-            //if (!commonSeq(rs.map(r=>r.result))) {
+        //if (rs.length>=2) {
+        //if (!alreadyAppeared(rs.map(r=>`${r.result}`), appeared)) {
+        if (!commonSeq(rs.map(r => r.result))) {
             count++;
             console.log(`[${count}]`, str);
             for (const r of rs) {

@@ -215,9 +215,9 @@ function gen() {
         if (r.eof) return R(r);
     }).all((rs:Array<StateImpl>)=>{
         rs=rs.filter(r=>!r.result.isRedundant());
-        if (rs.length>=2) {
+        //if (rs.length>=2) {
         //if (!alreadyAppeared(rs.map(r=>`${r.result}`), appeared)) {
-        //if (!commonSeq(rs.map(r=>r.result))) {
+        if (!commonSeq(rs.map(r=>r.result))) {
             count++;
             console.log(`[${count}]`, str);
             for (const r of rs) {
