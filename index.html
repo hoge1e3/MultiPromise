@@ -1,33 +1,11 @@
 <html>
-    <title>履修モデル適性チェックシート</title>
+    <title>KA</title>
     <head>
-<style media="screen">
-li {
-    max-height: 100%;
-}
-.answered {
-    color: green;
-}
-.unanswerd {
-    color: #d00;
-}
-#radarChart {
-//    float: right;
-}
-</style>
-<script src="require.js"></script>
-<script src="Chart.min.js"></script>
-<script src="showChart.js"></script>
-<!--script src="node_modules/jquery/dist/jquery.js"></script-->
+<script src="js/require.js"></script>
 <script>
-    requirejs.config({
-        paths:{
-            jquery:"node_modules/jquery/dist/jquery"
-        }
-    });
-    requirejs(["count"],function () {
-
-    });
+requirejs(["js/kaga"],()=>{
+    console.log("DONE");
+});
 </script>
-</head>
-<body>一部のブラウザ（Internet Explorerなど)ではこのページは表示できません．他のブラウザをお試しください．</body>
+<body></body>
+</html>
